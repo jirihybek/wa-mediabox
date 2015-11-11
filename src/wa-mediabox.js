@@ -230,10 +230,17 @@
 
 		this.keyDownHandler = function(ev){
 
+			ev.preventDefault();
+			ev.stopPropagation();
+
 			if(ev.keyCode === 37)
 				self.prev();
 			else if(ev.keyCode === 39)
 				self.next();
+			else if(ev.keyCode === 27)
+				self.close();
+
+			return false;
 
 		};
 
