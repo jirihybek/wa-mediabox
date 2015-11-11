@@ -60,7 +60,7 @@ When page loads then following elements are bound to MediaBox:
 	};
 
 </script>
-```html
+```
 
 ## License
 
