@@ -228,7 +228,17 @@
 
 		};
 
+		this.keyDownHandler = function(ev){
+
+			if(ev.keyCode === 37)
+				self.prev();
+			else if(ev.keyCode === 39)
+				self.next();
+
+		};
+
 		window.addEventListener("resize", this.resizeHandler);
+		document.body.addEventListener("keydown", this.keyDownHandler);
 
 		//Open
 		setTimeout(function(){
@@ -256,6 +266,7 @@
 		this.overlay.classList.remove("opened");
 
 		window.removeEventListener("resize", this.resizeHandler);
+		document.body.removeEventListener("keydown", this.keyDownHandler);
 
 		setTimeout(function(){
 
