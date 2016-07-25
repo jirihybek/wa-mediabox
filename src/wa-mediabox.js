@@ -561,7 +561,7 @@
 		var self = this;
 
 		var gallery = el.getAttribute("data-mediabox") || "_";
-		var src = el.getAttribute("href") || el.getAttribtue("data-src");
+		var src = String(el.getAttribute("href") || el.getAttribute("data-src"));
 		var title = el.getAttribute("data-title");
 		var isIframe = ( el.hasAttribute("data-iframe") || src.indexOf("youtube") >= 0 ? true : false );
 		var width = ( el.hasAttribute("data-width") ? parseInt(el.getAttribute("data-width")) : null );
