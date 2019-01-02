@@ -1,5 +1,7 @@
 # WA MediaBox
 
+Modern lightbox without jQuery and with iframe support.
+
 GALLERIES / PAGINATION / IFRAME / YOUTUBE VIDEOS / RESPONSIVE / MODERN DESIGN
 
 **NO jQuery needed**

@@ -1,6 +1,6 @@
 {
   "name": "wa-mediabox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modern lightbox without jQuery and with iframe support.",
   "directories": {},
   "scripts": {
@@ -13,9 +13,12 @@
     "url": "git+https://github.com/jirihybek/wa-mediabox.git"
   },
   "keywords": [
+    "media",
+    "image",
+    "gallery",
     "lightbox",
-    "youtube",
-    "media"
+    "fancybox",
+    "youtube"
   ],
   "author": "Jiri Hybek <jiri@hybek.cz>",
   "license": "MIT",
