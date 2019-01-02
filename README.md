@@ -6,18 +6,28 @@ GALLERIES / PAGINATION / IFRAME / YOUTUBE VIDEOS / RESPONSIVE / MODERN DESIGN
 
 [See DEMO at official page](http://jiri.hybek.cz/wa-mediabox/)
 
-## Usage
+## Installation
 
-Load MediaBox JavaScript and CSS:
+You can install the WA MediaBox manually by copying the files or you can use NPM:
 
-```html
-<script type="text/javascript" src="wa-mediabox/dist/wa-mediabox.min.js"></script>
-<link rel="stylesheet" type="text/css" href="wa-mediabox/dist/wa-mediabox.min.css" />
+```
+npm install wa-mediabox
 ```
 
-When page loads then following elements are bound to MediaBox:
+Note that the library does NOT export any module so you can use it standalone or pack it with your favourite tool such as Webpack but the WA MediaBox will be available only as a global variable as the `JavaScript API` section describes below.
 
-### For images:
+## Usage
+
+Load the WA MediaBox JavaScript and CSS:
+
+```html
+<script type="text/javascript" src="node_modules/wa-mediabox/dist/wa-mediabox.min.js"></script>
+<link rel="stylesheet" type="text/css" href="node_modules/wa-mediabox/dist/wa-mediabox.min.css">
+```
+
+When page loads then the following elements are bound to the WA MediaBox automatically:
+
+### For Images
 
 ```html
 <a href="image.jpg" data-mediabox="my-gallery-name" data-title="Sample image">
@@ -25,7 +35,7 @@ When page loads then following elements are bound to MediaBox:
 </a> 
 ```
 
-### For iframes:
+### For Iframes
 
 ```html
 <a href="https://www.youtube.com/embed/FA_8TY9Z5Zg?rel=0"
@@ -38,20 +48,20 @@ When page loads then following elements are bound to MediaBox:
 </a> 
 ```
 
-**YouTube videos are detected automatically so you can omit data-iframe attribute.**
+**YouTube videos are detected automatically so you can omit the data-iframe attribute.**
 
 ## JavaScript API
 
 ```html
 <script type="text/javascript">
 
-	//Bind single element manually
+	// Bind single element manually
 	WAMediaBox.bind(document.querySelector(".my-element"));
 
-	//Bind all child elements
+	// Bind all child elements
 	WAMediaBox.bindAll(document.querySelector(".my-parent-element"));
 
-	//Translate - set before any binding
+	// Translate - set before any binding
 	WAMediaBox.lang = {
 		prev: "Previous",
 		next: "Next",
@@ -66,8 +76,7 @@ When page loads then following elements are bound to MediaBox:
 
 The MIT License (MIT)
 
-Copyright (c) 2015 WA Studio (www.webarts.name)  
-Copyright (c) 2015 Jiri Hybek (jiri.hybek.cz)
+Copyright (c) 2015 - 2019 Jiri Hybek <jiri@hybek.cz> (jiri.hybek.cz)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

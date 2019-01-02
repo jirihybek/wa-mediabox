@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -194,20 +194,27 @@
 
 		<a href="https://github.com/jirihybek/wa-mediabox" target="_blank" class="github"><svg viewBox="0 0 24 24"><path d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" /></svg> Get on GitHub</a>
 
-		<h2>Usage</h2>
-		<p>Load MediaBox JavaScript and CSS:</p>
-		
-		<pre><code class="html">&lt;script type="text/javascript" src="wa-mediabox/dist/wa-mediabox.min.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" type="text/css" href="wa-mediabox/dist/wa-mediabox.min.css" /&gt;</code></pre>
+		<h2>Installation</h2>
+		<p>You can install the WA MediaBox manually by copying the files or you can use NPM:</p>
 
-		<p>When page loads then following elements are bound to MediaBox:</p>
+		<pre><code>npm install wa-mediabox</code></pre>
+
+		<p>Note that the library does NOT export any module so you can use it standalone or pack it with your favourite tool such as Webpack but the WA MediaBox will be available only as a global variable as the <code>JavaScript API</code> section describes below.</p>
+
+		<h2>Usage</h2>
+		<p>Load the WA MediaBox JavaScript and CSS:</p>
 		
-		<h3>For images:</h3>
+		<pre><code class="html">&lt;script type="text/javascript" src="node_modules/wa-mediabox/dist/wa-mediabox.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="node_modules/wa-mediabox/dist/wa-mediabox.min.css"&gt;</code></pre>
+
+		<p>When page loads then the following elements are bound to the WA MediaBox:</p>
+		
+		<h3>For Images</h3>
 		<pre><code class="html">&lt;a href="image.jpg" data-mediabox="my-gallery-name" data-title="Sample image"&gt;
 	&lt;img src="image-thumb.jpg" alt="Image" /&gt;
 &lt;/a&gt; </code></pre>
 
-		<h3>For iframes:</h3>
+		<h3>For Iframes</h3>
 		<pre><code class="html">&lt;a href="https://www.youtube.com/embed/FA_8TY9Z5Zg?rel=0"
 	data-mediabox="my-gallery-name"
 	data-iframe="true"
@@ -217,17 +224,17 @@
 	&lt;img src="image-thumb.jpg" alt="Image" /&gt;
 &lt;/a&gt; </code></pre>
 
-		<p class="note">YouTube videos are detected automatically so you can omit <code>data-iframe</code> attribute.</p>
+		<p class="note">YouTube videos are detected automatically so you can omit the <code>data-iframe</code> attribute.</p>
 
 		<h2>JavaScript API</h2>
 
-		<pre><code class="javascript">//Bind single element manually
+		<pre><code class="javascript">// Bind single element manually
 WAMediaBox.bind(document.querySelector(".my-element"));
 
-//Bind all child elements
+// Bind all child elements
 WAMediaBox.bindAll(document.querySelector(".my-parent-element"));
 
-//Translate - set before any binding
+// Translate - set before any binding
 WAMediaBox.lang = {
 	prev: "Previous",
 	next: "Next",
@@ -238,7 +245,7 @@ WAMediaBox.lang = {
 		<h2>License</h2>
 		<p>The MIT License (MIT)</p>
 
-		<p>Copyright (c) 2015 WA Studio (www.webarts.name)<br />Copyright (c) 2015 Jiri Hybek (jiri.hybek.cz)</p>
+		<p>Copyright (c) 2015 - 2019 Jiri Hybek (jiri.hybek.cz)</p>
 
 		<p>Permission is hereby granted, free of charge, to any person obtaining a copy
 		of this software and associated documentation files (the "Software"), to deal

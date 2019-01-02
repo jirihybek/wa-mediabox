@@ -1,17 +1,16 @@
 {
   "name": "wa-mediabox",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Modern lightbox without jQuery and with iframe support.",
-  "directories": {
-    "demo": "demo"
-  },
+  "directories": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/gulp"
+    "build": "gulp",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jirihybek/wa-mediabox.git"
+    "url": "git+https://github.com/jirihybek/wa-mediabox.git"
   },
   "keywords": [
     "lightbox",
@@ -21,9 +20,15 @@
   "author": "Jiri Hybek <jiri@hybek.cz>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "~3.8.11",
+    "gulp": "^3.8.11",
     "gulp-minify-css": "^1.2.1",
     "gulp-rename": "~1.2.0",
     "gulp-uglify": "~1.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jirihybek/wa-mediabox/issues"
+  },
+  "homepage": "https://github.com/jirihybek/wa-mediabox#readme",
+  "main": "dist/wa-mediabox.min.js",
+  "dependencies": {}
 }
